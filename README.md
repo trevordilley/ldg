@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+React + SVG top down RPG in the vein of baldurs gate meeting dark souls with an overworld inspired by Lords of Magic: Special edition
+ldg= Lords of the Dark Gate (lol get it?)
+
+#TODO
+- [x] Integrate geometry and visualize it over the qgis map
+- [x] Examine if spritesheets are a viable means of animation. (comparison is equivalent against Phaser)
+- [ ] Collision against collision geometry
+- [ ] Field of view using Fov geometry
+- [ ] PC character selection and movement
+- [ ] lighting using clip-paths, alphas, etc
+
+# REACT STUFF: Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,6 +39,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn storybook`
+See isolated elements and scenes using storybook!
 
 ### `yarn eject`
 
