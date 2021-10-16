@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b92772b-d2d1-4779-8c2e-acd704d2d30d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/spriteSheet/spriteSheetStress.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/spriteSheet/spriteSheetStress.stories.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

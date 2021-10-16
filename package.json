@@ -2,6 +2,9 @@
   "name": "ldg",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "babel-loader": "8.1.0"
+  },
   "dependencies": {
     "@inlet/react-pixi": "^6.6.5",
     "@react-hook/mouse-position": "^4.1.1",

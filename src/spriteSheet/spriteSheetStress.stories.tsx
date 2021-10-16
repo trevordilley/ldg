@@ -17,14 +17,17 @@ const frameIdx = (i: number) => i % numFrames
 const Template: ComponentStory<FC<{}>> = () => {
 
   // Big performance dips appear to be a function of how many sprite sheets there are which is a problem
-
   const {spriteSheet:fighterSheet, sprite: fighterFn} = fighterSpriteSheetFn()
 
   // Same image, but different sprite sheet def. I wonder if we should just pile all the sprites into a single sheet
   // (texture atlas)
   const {spriteSheet:otherFighterSheet, sprite: otherFighterFn} = fighterSpriteSheetFn()
+
+  // Other sheets
   const {spriteSheet:orcSheet, sprite: orcFn} = orcSpriteSheetFn()
   const {spriteSheet:treasureSheet, sprite: treasureFn} = treasureSpriteSheetFn()
+
+  // frames
   const fighterFrame = useFrame({startFrame: 0, endFrame: 26})
   const orcFrame = useFrame({startFrame: 0, endFrame: 10})
   const treasureFrame = useFrame({startFrame: 0, endFrame: 4})

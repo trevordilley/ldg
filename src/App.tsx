@@ -1,6 +1,8 @@
 import React, {useEffect, useState } from 'react';
 import { useRef } from 'react';
 import './App.css';
+import { useFrame } from './hooks/useFrame';
+import { fighterSpriteSheetFn } from './spriteSheet/fighterSpriteSheetFn';
 const height = 1365
 const width = 2048
 const mapPath = "./maps/hag_cave/hag_cave.jpeg"
@@ -47,6 +49,10 @@ function App() {
     return () => window.removeEventListener("mousemove", onMouseMove)
   },[])
 
+  const frame = useFrame({startFrame: 0, endFrame: 8})
+  const {sprite, spriteSheet} = fighterSpriteSheetFn()
+
+
   // @ts-ignore
   return (
       <svg
@@ -56,12 +62,14 @@ function App() {
         // viewBox messes with mouse position, figure that out.
         // viewBox={"0 0 1400 1400"}
       >
+        {spriteSheet}
         <image href={mapPath} x={0} y={0}/>
         <text x={mousePos.x} y={mousePos.y} fill={"#fff"}>
           ClientPos: {mousePos.x}, {mousePos.y}
         </text>
         <circle fill={"#00ff0022"} cx={mousePos.x } cy={mousePos.y} r={25} />
-
+        {sprite(frame, {x: 60, y: 60})}
+        {sprite(frame, {x: mousePos.x, y: mousePos.y})}
         <polygon points={pointsToStr(collisionPoints)} fill={"#ff000022"} />
         <polygon points={pointsToStr(fovPoints)} fill={"#0000ff22"} />
         <circle fill={markerColor} cx={10} cy={10} r={10} />
