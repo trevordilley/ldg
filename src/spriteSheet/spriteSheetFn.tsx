@@ -13,8 +13,8 @@ export const spriteSheetFn = ({spriteSheetId, spriteSheetPath, spriteSheetHeight
         <rect x="0" y="0" width={spriteSize} height={spriteSize}></rect>
       </clipPath>
     </defs>),
-    sprite: (frame: number, position: {x: number, y: number}) => (
-      <g transform={`translate(${position.x}, ${position.y})`}>
+    sprite: (id: string, frame: number, position: {x: number, y: number}) => (
+      <g key={id} transform={`translate(${position.x}, ${position.y})`}>
         <g>
           <image width={spriteSheetWidth} height={spriteSheetHeight} href={spriteSheetPath} clipPath={defUrl} x={frame * spriteSize * -1} y="0"></image>
         </g>

@@ -20,7 +20,7 @@ const Template: ComponentStory<FC<{}>> = () => {
       <FpsView width={240} height={180} left={256} top={80}/>
       <svg width={1728} height={26 * 64}>
         {fighterSheet}
-        {fighterFn(frame, {x: 0, y: 0})}
+        {fighterFn("mouse", frame, {x: 0, y: 0})}
       </svg>
     </div>)
 }

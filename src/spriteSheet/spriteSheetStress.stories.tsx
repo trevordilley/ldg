@@ -33,16 +33,16 @@ const Template: ComponentStory<FC<{}>> = () => {
   const treasureFrame = useFrame({startFrame: 0, endFrame: 4})
 
   const fighterRow = (r: number) =>
-    [...Array(numFrames)].map((_, i) => fighterFn(frameIdx(fighterFrame + i), {x: i * 128, y: r * 64}))
+    [...Array(numFrames)].map((_, i) => fighterFn(`f${i}`, frameIdx(fighterFrame + i), {x: i * 128, y: r * 64}))
 
   const otherFighterRow = (r: number) =>
-    [...Array(numFrames)].map((_, i) => otherFighterFn(frameIdx(fighterFrame + i), {x: i * 128, y: r * 64}))
+    [...Array(numFrames)].map((_, i) => otherFighterFn(`o${i}`, frameIdx(fighterFrame + i), {x: i * 128, y: r * 64}))
 
   const orcRow = (r: number) =>
-    [...Array(numFrames)].map((_, i) => orcFn(frameIdx(orcFrame + i), {x: i * 128, y: r * 128}))
+    [...Array(numFrames)].map((_, i) => orcFn(`orc${i}`,frameIdx( orcFrame + i), {x: i * 128, y: r * 128}))
 
   const treasureRow = (r: number) =>
-    [...Array(numFrames)].map((_, i) => treasureFn(frameIdx(treasureFrame + i), {x: i * 128, y: r * 128}))
+    [...Array(numFrames)].map((_, i) => treasureFn(`t${i}`,frameIdx( treasureFrame + i), {x: i * 128, y: r * 128}))
 
   const stress = (numRows: number) => [
     [...Array(numRows)].map((_, i) =>  fighterRow(i)),

@@ -20,7 +20,7 @@ const Template: ComponentStory<FC<{}>> = () => {
       <FpsView width={240} height={180} left={256} top={80}/>
       <svg width={128} height={128}>
         {spriteSheet}
-        {sprite(frame, {x: 0, y: 0})}
+        {sprite("treasure", frame, {x: 0, y: 0})}
       </svg>
     </div>)
 }
